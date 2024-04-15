@@ -27,7 +27,7 @@ def capture_packets():
     user_network_input = input("Choice: ")
     print("Choose amount of packets to capture (count)")
     user_count_input = int(input("Choice: "))
-    print("Choose any optional filters\n    Think of 'tcp', 'ucp', 'icmp', 'host 192.168.1.100', 'host 192.168.1.100 and port 80', ect.")
+    print("Choose any optional filters\n    Think of 'tcp', 'udp', 'icmp', 'host 192.168.1.100', 'host 192.168.1.100 and port 80', ect.")
     user_filter_input = input("Choice: ")
     pcts = sniff(iface=user_network_input, count=user_count_input, prn=packet_handler, filter=user_filter_input)
 
